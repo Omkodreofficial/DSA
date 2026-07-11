@@ -19,6 +19,11 @@ public class frequenies_array_element {
             map.put(arr[i], map.getOrDefault(arr[i], 0) + 1);
         }
 
+        // iterating through the map
+        // map.forEach((key,value)->{
+        //     System.out.println(key+" -> "+value);
+        // });
+
         System.out.println("enter the number of q");
         int q = sc.nextInt();
         while(q!=0){
