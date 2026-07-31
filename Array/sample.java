@@ -6,6 +6,7 @@ public class sample {
         System.out.println("First element: " + numbers[0]);
         System.out.println("Second element: " + numbers[1]);
         System.out.println("Third element: " + numbers[2]);
+        System.out.println("Fourth element: " + numbers[3]);
 
         System.out.println("Array elements:");
         for (int i = 0; i < numbers.length; i++) {
