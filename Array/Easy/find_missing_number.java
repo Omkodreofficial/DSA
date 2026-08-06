@@ -1,29 +1,19 @@
 public class find_missing_number {
 
     static int missing(int[] arr) {
-        int n = arr.length + 1;
-
-        for (int i = 1; i <= n; i++) {
-            boolean found = false;
-
-            for (int j = 0; j < n - 1; j++) {
-                if (arr[j] == i) {
-                    found = true;
-                    break;
-                }
-            }
-
-            if (!found) {
-                return i;
-            }
+        int xor1 = 0, xor2 = 0;
+        int n = arr.length;
+        for (int i = 0; i < n; i++) {
+            xor2 = xor2 ^ arr[i];
+            xor1 = xor1 ^ (i+1);
         }
-
-        return -1;
+        xor1 = xor1 ^ (n+1);
+        return xor1 ^ xor2;
     }
 
     public static void main(String[] args) {
-        int[] arr = {4, 5, 7, 3, 2, 1};
+        int[] arr = { 4, 5, 7, 3, 2, 1 };
 
-        System.out.println(missing(arr));   
+        System.out.println(missing(arr));
     }
 }
